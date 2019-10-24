@@ -19,6 +19,6 @@
             <b>Server     </b>: Glassfish server<br>
             <b>Database   </b>: MySql 8.0.17 <br>
             <b>UI library </b>: Bootstrap <br>
-        <b>This is my first sample project in Github.
+        <b>This is my first sample project in Github. Added on 2019 October 24
     </body>
 </html>
