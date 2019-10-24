@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    <definition id="layout" name="layout" path="/WEB-INF/layout.jsp">
+        <put name="title"  value="Tiles Example" />
+        <put name="header" value="/WEB-INF/header.jsp"></put>
+        <put name="content" value="/WEB-INF/content.jsp"></put>
+        <put name="footer" value="/WEB-INF/footer.jsp"></put>
+    </definition>
+    
+    <definition name="contacts" extends="layout">
+        <put name="title" value="Contact Tile"></put>
+        <put name="content" value="/WEB-INF/contacts.jsp"></put>
+    </definition>
+    
+    <definition name="userlist" extends="layout">
+        <put name="title" value="User Tile"></put>
+        <put name="content" value="/WEB-INF/users.jsp"></put>
+    </definition>
+    
+    <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+
+</tiles-definitions>
