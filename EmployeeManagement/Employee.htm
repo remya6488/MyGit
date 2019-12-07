@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./css/all.min.css"/>
+<style>
+th{color : #2771ad;}
+
+.header {
+	background-image: linear-gradient(to right, #c5d5e3, #6dafe3, #c5d5e3);
+	padding : 1em .25em;
+	text-align : center;
+	color: #f7eeee;
+    font-family: serif;
+}
+
+.container {margin-top : 1.5em;}
+.menu {
+	display:inline-block;
+	width : 100%;
+	text-align : right;
+}
+.act-icn-head {
+	float: right;
+    padding: .7em;
+    font-size: 1.25em;
+	color : #4198de;
+}
+.icn { padding : .5em; }
+.fa-pencil-alt { color : #5b84a4;}
+.fa-trash-alt {color : #e87070;}
+
+#empForm { 
+	border : 1px solid #f1f1f1;
+	padding: 1em;
+}
+
+.close {
+	color: #c1c1c1;
+    border: 1px solid #e8e8e8;
+    padding: .25em .4em;
+	margin-bottom:-.25em;
+}
+.selected { font-weight : bold;  }
+
+</style>
+</head>
+<body onload="loadEmployees()">
+
+
+<body>
+<div class="header">
+	<h3 >Employee Management</h3>
+</div>
+<div class="container">
+	<div class="menu" id="top-icons"><i class="fas fa-user-plus act-icn-head" onclick="showEmpForm()"></i></div>
+	<div id="empForm">
+		<form action="#" onsubmit="onFormSubmit()" >
+		
+		  <div class="form-row" >
+			<div class="form-group col-md-3">
+			  <label for="fname">First Name</label>
+			  <input  class="form-control" id="fname" placeholder="First Name" required>
+			</div>
+			<div class="form-group col-md-3">
+			  <label for="fname">Last Name</label>
+			  <input  class="form-control" id="lname" placeholder="Last Name" required>
+			</div>
+		  
+			<div class="form-group col-md-2">
+			  <label for="age">Age</label>
+			  <input  class="form-control" id="age" placeholder="Age">
+			</div>
+			<div class="form-group col-md-2">
+			  <label for="dept">Department</label>
+			  <select id="dept" class="form-control"  required>
+				<option value= "" selected>Choose...</option>
+				<option value="Accounts" >Accounts</option>
+				<option value="Sales" >Sales</option>
+				<option value="Development" >Development</option>
+			  </select>
+			</div>
+			<div class="form-group col-md-2">
+			  <input type="hidden" id="empId" value="" /><br>
+			  <input type="submit"  class="btn btn-primary pr-3 pl-3" value="save" ></input>
+			</div>
+		  </div>
+		  
+		
+		</form>
+	</div>
+	
+	
+	<table class="table table-striped">
+	  <thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Employee Id</th>
+		  <th scope="col">Name</th>
+		  <th scope="col">Age</th>
+		  <th scope="col">Department</th>
+		  <th scope="col"></th>
+		</tr>
+	  </thead>
+	  <tbody id="list">
+	  </tbody>
+	</table>
+
+</div>
+
+<script type="text/javascript" src="./js/services.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
