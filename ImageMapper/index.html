@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="site.css">
+    <head></head>
+    <body>
+        <div class="container">
+            <header> <h3>Image Mapper</h3></header>
+            <div>
+                <label for="img">Upload the image : </label>
+                <input type="file" accept="image/*" src="" alt="" id="file" onchange="uploadFile()">
+            </div>
+            <div class="row">
+                <div id="imgContainer" class="col">
+                    <img src="" alt="" id="img" onload="showProps()" onclick="addDesc()">
+                    
+                </div>
+                <div class="col">
+                    <table id="prop" style="display:none;">
+                        <thead><tr> <th colspan="3"> Image Properties</th></tr></thead>
+                        <tr> <td> Image Name</td><td>:</td> <td> <span id="imgName"></span></td></tr>
+                        <tr><td> Dimensions</td><td>:</td><td> <span id=dimensions></span></td></tr>
+                        <tr><td> MIME Type </td><td>:</td><td> <span id="mime"></span></td></tr>
+                    </table>
+                    <br><br>
+                    <div class="list-container">
+                        <table id="list" border="1">
+                            <thead><tr>
+                                <th>X Coordinate</th>
+                                <th>Y Coordinate</th>
+                                <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="list-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="image-mapper.js"></script>
+    </body>
+
+</html>
