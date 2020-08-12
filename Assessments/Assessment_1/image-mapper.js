@@ -1,4 +1,4 @@
-@@ -0,0 +1,89 @@
+
 var file;
 var imagemap= [];
 
@@ -23,11 +23,13 @@ function uploadFile(){
 
 // to display the uploaded image properties
 function showProps() {    
-    document.getElementById("prop").style.display   = "block";
+    document.getElementById("prop").style.display   = "table";
     document.getElementById("imgName").innerHTML    = file.name;
     document.getElementById("mime").innerHTML       = file.type;
     document.getElementById("dimensions").innerHTML =  
-    document.getElementById("img").width + " X " +  document.getElementById("img").height;          
+    document.getElementById("img").naturalWidth + " X " +  document.getElementById("img").naturalHeight;      
+    debugger;
+    document.getElementById("list-container").style.height = document.getElementById("img").height + "px";
 }
 
 // action for cancel button
@@ -37,7 +39,11 @@ function cancelDesc(){
 // action for saving the description
 function saveDesc(x,y){
     let desc = document.getElementById("desc"+x+"_"+y).value;
-    
+    if (desc == ""){
+        alert("please enyter the description");
+        document.getElementById("desc"+x+"_"+y).focus();
+        return;
+    }
     let left = document.getElementById("img").offsetLeft;
     let top = document.getElementById("img").offsetTop;
 
@@ -45,7 +51,7 @@ function saveDesc(x,y){
     let final_y = (y - top);
     
     imagemap.push({'x' : final_x, 'y' : final_y, 'desc' : desc});
-    if (imagemap.length == 1) {document.getElementById("list").style.display = "table";}
+    if (imagemap.length == 1) {document.getElementById("list").style.visibility = "visible";}
     var row = document.createElement('tr');
     row.innerHTML = "<td>" + final_x + "</td>" + 
                     "<td>" + final_y + "</td>" + 

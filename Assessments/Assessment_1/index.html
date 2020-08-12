@@ -1,4 +1,3 @@
-@@ -0,0 +1,43 @@
 <!DOCTYPE html>
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -11,24 +10,27 @@
                 <label for="img">Upload the image : </label>
                 <input type="file" accept="image/*" src="" alt="" id="file" onchange="uploadFile()">
             </div>
+            
+            <span>
+                <table id="prop" cellpadding="3" style="display:none;">
+                    <thead><tr> <th colspan="3"> Image Properties</th></tr></thead>
+                    <tr> <td> Image Name</td><td>:</td> <td> <span id="imgName"></span></td></tr>
+                    <tr><td> Dimensions</td><td>:</td><td> <span id=dimensions></span></td></tr>
+                    <tr><td> MIME Type </td><td>:</td><td> <span id="mime"></span></td></tr>
+                </table>
+            </span>
+            <br><br>
             <div class="row">
                 <div id="imgContainer" class="col">
                     <img src="" alt="" id="img" onload="showProps()" onclick="addDesc()">
                     
                 </div>
-                <div class="col">
-                    <table id="prop" style="display:none;">
-                        <thead><tr> <th colspan="3"> Image Properties</th></tr></thead>
-                        <tr> <td> Image Name</td><td>:</td> <td> <span id="imgName"></span></td></tr>
-                        <tr><td> Dimensions</td><td>:</td><td> <span id=dimensions></span></td></tr>
-                        <tr><td> MIME Type </td><td>:</td><td> <span id="mime"></span></td></tr>
-                    </table>
-                    <br><br>
-                    <div class="list-container">
-                        <table id="list" border="1">
+                <div class="col">                    
+                    <div id="list-container">
+                        <table id="list" cellpadding="3" >
                             <thead><tr>
-                                <th>X Coordinate</th>
-                                <th>Y Coordinate</th>
+                                <th>X Pos</th>
+                                <th>Y POs</th>
                                 <th>Description</th>
                                 </tr>
                             </thead>
