@@ -1,0 +1,58 @@
+<p>user works!</p>
+<p>{{title}}</p>
+<p>User form</p>
+<form>
+    <div class="form-row">
+        <div class="col">
+            <input type="text" class="form-control" id="firstName" placeholder="First Name" name="firstName" [(ngModel)]="user.firstName" >
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name" name="lastName" [(ngModel)]="user.lastName">
+        </div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <input type="email" class="form-control" id="mailId" placeholder="Email" name="mailId" [(ngModel)]="user.mailId">
+      </div>
+    </div>
+
+
+
+    <div>
+        <button class="btn btn-primary" (click)="addAddress()">Add Address</button>  
+        <div class="form-row" *ngFor="let address of user.addresses">
+            <div class="col">
+                <input type="text" class="form-control" id="aLine1" placeholder="Lane/Road" name="aLine1" [(ngModel)]="address.line1" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="aLine2" placeholder="Landmark" name="aLine2" [(ngModel)]="address.line2" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="city" placeholder="City" name="city" [(ngModel)]="address.city" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="state" placeholder="State" name="state" [(ngModel)]="addresses.state" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="country" placeholder="Country" name="country" [(ngModel)]="addresses.country" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="state" placeholder="State" name="state" [(ngModel)]="address.state" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="zipcode" placeholder="Zip Code" name="zipcode" [(ngModel)]="address.zipcode" >
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="addNumber()">Add Number</button>  
+        <div class="form-row" *ngFor="let contact of user.contacts">
+            <div class="col">
+                <input type="text" class="form-control" id="type" placeholder="Type" name="type" [(ngModel)]="contact.type" >
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="number" placeholder="Number" name="number" [(ngModel)]="contact.number" >
+            </div>
+        </div>
+    </div>
+  </form>

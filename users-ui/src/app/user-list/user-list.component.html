@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Users</h1>
+    <button class="btn btn-primary" (click)="addUser()">New</button>  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{user.firstName}} {{user.lastName}}</td>
+          <td>{{user.mailId}}</td>
+          <td>
+              <button class="btn btn-info" (click)="editUser(user.id)">Edit</button>
+              <button class="btn btn-danger" (click)="deleteUser(user.id)">delete</button>
+          </td>
+        </tr>
+        <tr *ngIf="users == null" > <td style="height: 20px;"></td> No user exists. </tr>
+      </tbody>
+    </table>
+  </div>
